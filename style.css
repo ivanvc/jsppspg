@@ -19,53 +19,58 @@ More information http://elasticss.com
 
 *{
   font-family: "Lucida Grande" !important;
+  color: #252326;
 }
 
 html {
-  background: #2B2A25;
+  background: #252326;
 }
 
 h1, h2, h3 {
-  color: #2B2A25;
-  text-shadow: -1px -1px 1px #888;
+  color: #252326;
 }
   div.wrapper {
     width : 960px;
     margin : 40px auto 0 auto;
-    background: #B2AD9A;
+    background: #F2F0F1;
     padding : 40px;
   }
 
     div.wrapper > table.stats {
       border-left: 1px solid #999;
       border-top: 1px solid #999;
-      border-right: 1px solid #555;
-      border-bottom: 1px solid #555;
+      border-right: 1px solid #252326;
+      border-bottom: 1px solid #252326;
       width: 960px;
     }
 
       div.wrapper > table.stats > thead > tr {
         height: 60px;
-        background: #676767;
-        border-bottom: 1px solid #555;
+        background: #626473;
+        border-bottom: 1px solid #252326;
       }
 
         div.wrapper > table.stats > thead > tr > td {
           text-align: center;
-          text-shadow: -1px -1px 1px #888;
           font-size: 15px;
-          color: #2B2A25;
+          color: #F2F0F1;
           font-weight: bold;
         }
      div.wrapper > table.stats > tbody > tr {
        height : 40px;
+       background : #B8D2D9;
      }
       div.wrapper > table.stats > tbody > tr.odd{
-       background: #A69C8D;
+       background: #73B3D9;
+
       }
+        div.wrapper > table.stats > tbody > tr.odd > td {
+          color: #F7F7EA;
+        }
       div.wrapper > table.stats > tbody > tr > td {
         padding: 10px 20px;
         text-align: center;
+        color: #252326;
       }
       div.wrapper > table.stats > tbody > tr > td.text {
         text-align: justify;
