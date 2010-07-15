@@ -75,6 +75,12 @@ h1, h2, h3 {
       div.wrapper > table.stats > tbody > tr > td.text {
         text-align: justify;
       }
+  div.wrapper > div.calendario > div.jornada {
+    margin: 10px 0;
+    border-bottom: 1px dotted #E3DADE;
+  }
+  div.wrapper > div.calendario > div.jornada > div.partido {
+  }
   div.wrapper > div.reglas > ol > li {
     padding : 5px 10px;
   }
