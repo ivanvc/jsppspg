@@ -2,7 +2,6 @@ require 'dm-core'
 require 'dm-timestamps'
 require 'dm-validations'
 require 'sinatra'
-require 'do_sqlite3'
 
 configure do
   set :app_file, File.expand_path(File.dirname(__FILE__) + '/app.rb')
