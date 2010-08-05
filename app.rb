@@ -28,15 +28,15 @@ end
 class Bet 
   include DataMapper::Resource
   property :id, Serial
-  property :owner, String
-  property :amount, Integer
+  property :owner, String, :required => true
+  property :amount, Integer, :required => true
   belongs_to :team
 end
 
 class Team
   include DataMapper::Resource
   property :id, Serial
-  property :name, String
+  property :name, String, :required => true
   has n, :bets
 end
 

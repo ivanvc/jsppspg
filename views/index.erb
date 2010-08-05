@@ -4,7 +4,7 @@
     <div class="column team <%= team[:team].name %>">
       <h2><%= team[:team].name %></h2>
       <p class="bets"><%= team[:bets].size.to_f/@total_bets %></p>
-      <p class="button"><input type="radio" name="bet[team_id]" value="<%= team[:team].id %>" /></p>
+      <p class="button"><input type="radio" name="bet[team_id]" value="<%= team[:team].id %>" <%= 'checked="checked"' if @teams.first == team %>/></p>
     </div>
   <% end %>
 </div>
