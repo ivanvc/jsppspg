@@ -1,3 +1,5 @@
+source :gemcutter
+
 gem 'dm-core', "0.10.2"
 gem 'dm-timestamps', "0.10.2"
 gem 'dm-validations', "0.10.2"
