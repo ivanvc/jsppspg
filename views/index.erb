@@ -30,10 +30,20 @@
     <div class="column">
       <ul>
         <% team[:bets].each do |bet| %>
-          <li><%= bet.owner %>: $<%= bet.amount %> MXN</li>
+          <li><%= bet.owner %>: $<%= bet.amount %></li>
         <% end %>
       </ul>
+      <p><span>Total:</span> $<%= team[:team].total_amount %> MXN</p>
     </div>
   <% end %>
 </div>
+
+<p class="notice">
+  Si deseas calcular el total de tu ganancia sigue esta fórmula (A/T)*G
+  <ul>
+    <li>A: Tu apuesta</li>
+    <li>T: El total acumulado en el equipo por el que apostaste</li>
+    <li>G: El total acumulado en el equipo por el que no apostaste</li>
+  </ul>
+</p>
 
