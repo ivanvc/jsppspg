@@ -1,0 +1,29 @@
+<form action="/" method="post">
+<div class="teams columns on-<%= @teams.size %>">
+  <% @teams.each do |team| %>
+    <div class="column team <%= team[:team].name %>">
+      <h2><%= team[:team].name %></h2>
+      <p class="bets"><%= team[:bets].size.to_f/@total_bets %></p>
+      <p class="button"><input type="radio" name="bet[team_id]" value="<%= team[:team].id %>" /></p>
+    </div>
+  <% end %>
+</div>
+<p class="elements">
+  <label for="bet_owner">Tu nombre</label>
+  <input type="text" name="bet[owner]" id="bet_owner" />
+  <label for="bet_amount">Cantidad</label>
+  <input type="text" name="bet[amount]" id="bet_amount" />
+  <input type="submit" />
+</p>
+</form>
+
+<div class="columns on-<%= @teams.size %>">
+  <% @teams.each do |team| %>
+    <ul class="column">
+      <% team[:bets].each do |bet| %>
+        <li><%= bet.owner %>: <%= bet.amount %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
