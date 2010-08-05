@@ -2,9 +2,17 @@
 <div class="teams columns on-<%= @teams.size %>">
   <% @teams.each do |team| %>
     <div class="column team <%= team[:team].name %>">
-      <h2><%= team[:team].name %></h2>
-      <p class="bets"><%= team[:bets].size.to_f/@total_bets %></p>
-      <p class="button"><input type="radio" name="bet[team_id]" value="<%= team[:team].id %>" <%= 'checked="checked"' if @teams.first == team %>/></p>
+      <div class="columns on-2 same-height">
+        <div class="column">
+          <h2><%= team[:team].name %></h2>
+        </div>
+        <div class="column button">
+          <div class="container full-height">
+            <input type="radio" name="bet[team_id]" class="vertical-center" value="<%= team[:team].id %>" <%= 'checked="checked"' if @teams.first == team %>/>
+            <p class="bets"><%= team[:bets].size.to_f/@total_bets %></p>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
@@ -19,11 +27,13 @@
 
 <div class="columns on-<%= @teams.size %>">
   <% @teams.each do |team| %>
-    <ul class="column">
-      <% team[:bets].each do |bet| %>
-        <li><%= bet.owner %>: <%= bet.amount %></li>
-      <% end %>
-    </ul>
+    <div class="column">
+      <ul>
+        <% team[:bets].each do |bet| %>
+          <li><%= bet.owner %>: $<%= bet.amount %> MXN</li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
 </div>
 
